@@ -31,6 +31,19 @@ class InventarioTest {
         assertEquals(4, Inventario.contarTotalProdutos(estoque));
     }
 
+    @Test
+    void deveValidarComportamentoDosGettersESettersDoProduto() {
+        Produto produto = new Produto("Café", false);
+
+
+        produto.setNome("Café Torrado Premium");
+        produto.setVencido(true);
+
+
+        assertEquals("Café Torrado Premium", produto.getNome());
+        assertTrue(produto.isVencido());
+    }
+
 
 
 
